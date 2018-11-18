@@ -68,6 +68,12 @@
     <Folder Include="Answers\dbo\Tables" />
     <Folder Include="Answers\dbo\Tables\Answers" />
     <Folder Include="Answers\dbo\Views" />
+    <Folder Include="Supports" />
+    <Folder Include="Supports\dbo" />
+    <Folder Include="Supports\dbo\Tables" />
+    <Folder Include="Supports\dbo\Tables\Supports" />
+    <Folder Include="Supports\dbo\Stored Procedures" />
+    <Folder Include="Supports\dbo\Stored Procedures\Supports" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Answers\dbo\Stored Procedures\Answers\AnswersCount.sql" />
@@ -81,6 +87,17 @@
     <Build Include="Answers\dbo\Stored Procedures\Answers\AnswersWrite.sql" />
     <Build Include="Answers\dbo\Tables\Answers\Answers.sql" />
     <Build Include="Answers\dbo\Tables\Answers\AnswersComments.sql" />
+    <Build Include="Supports\dbo\Tables\Supports\Supports.sql" />
+    <Build Include="Supports\dbo\Tables\Supports\SupportsComments.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsCount.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsDelete.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsDetails.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsList.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsModify.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsReply.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchCount.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchList.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsWrite.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MemoEngine.Database.publish.xml" />
