@@ -87,8 +87,10 @@ namespace MemoEngine.Supports
         }
         public List<SupportComment> GetComments(int articleId, string userName)
         {
+            //string sql = "Select * From SupportsComments Where ArticleId = @ArticleId And UserName = @UserName";
+            string sql = "Select * From SupportsComments Where ArticleId = @ArticleId";
             return db.Query<SupportComment>(
-                "Select * From SupportsComments Where ArticleId = @ArticleId And UserName = @UserName"
+                sql
                 , new { ArticleId = articleId, UserName = userName }
                 , commandType: CommandType.Text).ToList();
         }

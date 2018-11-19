@@ -26,7 +26,7 @@ namespace MemoEngine.Supports
         public int RecordCount = 0; // 총 레코드 갯수(글번호 순서 정렬용)
 
         private readonly string connectionString;
-        private readonly ISupportRepository _repository;
+        private readonly SupportRepository _repository;
         private string userName; // 사용자 아이디 
 
         public SupportIndex()
@@ -81,13 +81,29 @@ namespace MemoEngine.Supports
             // 레코드 카운트 출력
             if (!SearchMode)
             {
-                // 전체 레코드 수 출력
-                RecordCount = _repository.GetCountAll(userName);
+                if (AccountHandler.HasGroup("Administrators"))
+                {
+                    // 전체 레코드 수 출력
+                    RecordCount = _repository.GetCountAllAdmin();
+                }
+                else
+                {
+                    // 전체 레코드 수 출력
+                    RecordCount = _repository.GetCountAll(userName);
+                }
             }
             else
             {
-                // 검색된 레코드 수 출력
-                RecordCount = _repository.GetCountBySearch(userName, SearchField, SearchQuery);
+                if (AccountHandler.HasGroup("Administrators"))
+                {
+                    // 검색된 레코드 수 출력
+                    RecordCount = _repository.GetCountBySearchAdmin(SearchField, SearchQuery);
+                }
+                else
+                {
+                    // 검색된 레코드 수 출력
+                    RecordCount = _repository.GetCountBySearch(userName, SearchField, SearchQuery);
+                }
             }
             lblTotalRecord.Text = RecordCount.ToString(); // 레코드 수 출력  
             #endregion
@@ -109,13 +125,29 @@ namespace MemoEngine.Supports
         {
             if (!SearchMode)
             {
-                // 기본 리스트
-                ctlBoardList.DataSource = _repository.GetAll(userName, PageNumber, PageSize);
+                if (AccountHandler.HasGroup("Administrators"))
+                {
+                    // 기본 리스트
+                    ctlBoardList.DataSource = _repository.GetAllAdmin(PageNumber, PageSize);
+                }
+                else
+                {
+                    // 기본 리스트
+                    ctlBoardList.DataSource = _repository.GetAll(userName, PageNumber, PageSize);
+                }
             }
             else
             {
-                // 검색 리스트 
-                ctlBoardList.DataSource = _repository.GetSearchAll(userName, SearchField, SearchQuery, PageNumber, PageSize);
+                if (AccountHandler.HasGroup("Administrators"))
+                {
+                    // 검색 리스트 
+                    ctlBoardList.DataSource = _repository.GetSearchAllAdmin(SearchField, SearchQuery, PageNumber, PageSize);
+                }
+                else
+                {
+                    // 검색 리스트 
+                    ctlBoardList.DataSource = _repository.GetSearchAll(userName, SearchField, SearchQuery, PageNumber, PageSize);
+                }
             }
             ctlBoardList.DataBind();
         }

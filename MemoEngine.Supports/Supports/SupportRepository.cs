@@ -143,6 +143,18 @@ namespace MemoEngine.Supports
                 throw new System.Exception(ex.Message);
             }
         }
+        public List<ArticleBase> GetAllAdmin(int pageNumber, int pageSize = 10)
+        {
+            try
+            {
+                var parameters = new DynamicParameters(new { PageNumber = pageNumber, PageSize = pageSize });
+                return db.Query<ArticleBase>("SupportsListAdmin", parameters, commandType: CommandType.StoredProcedure).ToList();
+            }
+            catch (System.Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
 
 
 
@@ -158,6 +170,11 @@ namespace MemoEngine.Supports
         {
             var parameters = new DynamicParameters(new { Id = id, UserName = userName });
             return db.Query<ArticleBase>("SupportsDetails", parameters, commandType: CommandType.StoredProcedure).SingleOrDefault();
+        }
+        public ArticleBase GetByIdAdmin(int id)
+        {
+            var parameters = new DynamicParameters(new { Id = id });
+            return db.Query<ArticleBase>("SupportsDetailsAdmin", parameters, commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
         /// <summary>
@@ -218,6 +235,24 @@ namespace MemoEngine.Supports
                 throw new System.Exception(ex.Message);
             }
         }
+        public int GetCountBySearchAdmin(string searchField, string searchQuery)
+        {
+            try
+            {
+                return db.Query<int>("SupportsSearchCountAdmin", new
+                {
+                    SearchField = searchField,
+                    SearchQuery = searchQuery
+                },
+                    commandType: CommandType.StoredProcedure)
+                    .SingleOrDefault();
+
+            }
+            catch (System.Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
 
         /// <summary>
         /// Id에 해당하는 첨부된 파일명 반환
@@ -254,6 +289,12 @@ namespace MemoEngine.Supports
             var parameters = new DynamicParameters(
                 new { SearchField = searchField, SearchQuery = searchQuery, PageNumber = pageNumber, PageSize = pageSize, UserName = userName });
             return db.Query<ArticleBase>("SupportsSearchList", parameters, commandType: CommandType.StoredProcedure).ToList();
+        }
+        public List<ArticleBase> GetSearchAllAdmin(string searchField, string searchQuery, int pageNumber, int pageSize = 10)
+        {
+            var parameters = new DynamicParameters(
+                new { SearchField = searchField, SearchQuery = searchQuery, PageNumber = pageNumber, PageSize = pageSize });
+            return db.Query<ArticleBase>("SupportsSearchListAdmin", parameters, commandType: CommandType.StoredProcedure).ToList();
         }
 
         public List<ArticleBase> GetSummaryByCategory(string category)
@@ -347,6 +388,17 @@ namespace MemoEngine.Supports
             {
                 return db.Query<int>(
                     "Select Count(*) From Supports Where UserName = @UserName", new { UserName = userName }).SingleOrDefault();
+            }
+            catch (System.Exception)
+            {
+                return -1;
+            }
+        }
+        public int GetCountAllAdmin()
+        {
+            try
+            {
+                return db.Query<int>("Select Count(*) From Supports").SingleOrDefault();
             }
             catch (System.Exception)
             {

@@ -98,6 +98,10 @@
     <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchCount.sql" />
     <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchList.sql" />
     <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsWrite.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsListAdmin.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsDetailsAdmin.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchCountAdmin.sql" />
+    <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchListAdmin.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MemoEngine.Database.publish.xml" />

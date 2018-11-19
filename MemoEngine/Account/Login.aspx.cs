@@ -38,6 +38,12 @@ namespace MemoEngine.Account
                 // 로그인 성공했으면
                 Session["UserName"] = Email.Text; // 이메일 또는 아이디 
 
+                // 수작업으로 관리자 권한을 추가
+                if (Email.Text == "admin@a.com")
+                {
+                    Session["GroupId"] = "Administrators";
+                }
+
                 switch (result)
                 {
                     case SignInStatus.Success:

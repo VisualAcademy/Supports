@@ -2662,6 +2662,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Supports\Models\AccountHandler.cs" />
     <Compile Include="Supports\SupportCommentDelete.aspx.cs">
       <DependentUpon>SupportCommentDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

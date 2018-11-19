@@ -82,7 +82,15 @@ namespace MemoEngine.Supports.Controls
         private void DisplayDataForReply()
         {
             // 넘겨온 Id 값에 해당하는 레코드 하나 읽어서 모델 클래스에 바인딩
-            var model = _repository.GetById(Convert.ToInt32(_Id), _userName);
+            var model = new ArticleBase();
+            if (AccountHandler.HasGroup("Administrators"))
+            {
+                model = _repository.GetByIdAdmin(Convert.ToInt32(_Id));
+            }
+            else
+            {
+                model = _repository.GetById(Convert.ToInt32(_Id), _userName);
+            }
 
             txtTitle.Text = $"Re : {model.Title}";
             //string content = $"<br /><br />On {model.PostDate}, '{model.Name}' wrote:<hr />{model.Content}";
@@ -93,7 +101,15 @@ namespace MemoEngine.Supports.Controls
         private void DisplayDataForModify()
         {
             //[A] 넘겨온 Id 값에 해당하는 레코드 하나 읽어서 모델 클래스에 바인딩
-            var model = _repository.GetById(Convert.ToInt32(_Id), _userName);
+            var model = new ArticleBase();
+            if (AccountHandler.HasGroup("Administrators"))
+            {
+                model = _repository.GetByIdAdmin(Convert.ToInt32(_Id));
+            }
+            else
+            {
+                model = _repository.GetById(Convert.ToInt32(_Id), _userName);
+            }
 
             //[B] 각각의 항목을 컨트롤(레이블, 텍스트박스, ...)에 출력 
             ddlCategoryList.SelectedValue = model.Category; // 기존 값 선택

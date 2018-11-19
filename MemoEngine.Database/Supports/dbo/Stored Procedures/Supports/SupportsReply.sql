@@ -14,7 +14,7 @@ CREATE PROCEDURE [dbo].[SupportsReply]
     @FileName   NVarChar(255),
     @FileSize   Int,
 
-	@UserName NVarChar(100)	-- 사용자 아이디
+	@UserName NVarChar(100)				-- 사용자 아이디
 AS
     --[0] 변수 선언
     Declare @MaxRefOrder Int
@@ -22,6 +22,9 @@ AS
     Declare @ParentRef Int
     Declare @ParentStep Int
     Declare @ParentRefOrder Int
+
+	--[!] 부모글의 UserName을 가져오기(관리자가 답변을 해도 일반 사용자가 답변 글을 볼 수 있게)
+	Select @UserName = UserName From Supports Where Id = @ParentNum -- @UserName 덮어쓰기
 
     --[1] 부모글의 답변수(AnswerNum)를 1증가
     Update Supports Set AnswerNum = AnswerNum + 1 Where Id = @ParentNum 
