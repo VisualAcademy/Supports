@@ -35,9 +35,14 @@ namespace MemoEngine.Account
                 // 암호 오류 시 잠금을 트리거하도록 설정하려면 shouldLockout: true로 변경하십시오.
                 var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
 
+                // 로그인 성공했으면
+                Session["UserName"] = Email.Text; // 이메일 또는 아이디 
+
                 switch (result)
                 {
                     case SignInStatus.Success:
+
+
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         break;
                     case SignInStatus.LockedOut:

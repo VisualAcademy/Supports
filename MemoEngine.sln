@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MemoEngine.Database", "Memo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoEngine.Answers", "MemoEngine.Answers\MemoEngine.Answers.csproj", "{7B373057-542C-477C-8C9F-18B819DB07AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoEngine.Supports", "MemoEngine.Supports\MemoEngine.Supports.csproj", "{2B464043-80EF-40A9-9061-F46EEFD8FF56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{7B373057-542C-477C-8C9F-18B819DB07AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B373057-542C-477C-8C9F-18B819DB07AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B373057-542C-477C-8C9F-18B819DB07AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B464043-80EF-40A9-9061-F46EEFD8FF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B464043-80EF-40A9-9061-F46EEFD8FF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B464043-80EF-40A9-9061-F46EEFD8FF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B464043-80EF-40A9-9061-F46EEFD8FF56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
