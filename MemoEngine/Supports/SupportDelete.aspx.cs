@@ -25,7 +25,8 @@ namespace MemoEngine.Supports
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             // 현재 글(Id)의 비밀번호가 맞으면 삭제
-            if (repository.Delete(Convert.ToInt32(Id), txtPassword.Text) > 0)
+            int result = repository.Delete(Convert.ToInt32(Id), txtPassword.Text, Session["UserName"].ToString());
+            if (result > 0)
             {
                 Response.Redirect("SupportIndex.aspx");
             }

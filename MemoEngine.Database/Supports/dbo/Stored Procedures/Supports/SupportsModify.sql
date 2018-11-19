@@ -13,6 +13,7 @@ CREATE PROCEDURE [dbo].[SupportsModify]
     @FileName	NVarChar(255),
     @FileSize	Int,    
     @Id Int,
+
 	@UserName NVarChar(100)	-- 사용자 아이디
 As
 	-- 번호와 암호가 맞으면 수정을 진행 

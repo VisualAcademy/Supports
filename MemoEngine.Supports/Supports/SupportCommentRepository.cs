@@ -31,7 +31,7 @@ namespace MemoEngine.Supports
                 Insert Into SupportsComments (ArticleId, Name, Opinion, Password, UserName)
                 Values(@ArticleId, @Name, @Opinion, @Password, @UserName);
 
-                Update Answers Set CommentCount = CommentCount + 1 
+                Update Supports Set CommentCount = CommentCount + 1 
                 Where Id = @ArticleId
             ";
 
@@ -64,7 +64,7 @@ namespace MemoEngine.Supports
         {
             return db.Execute(@"
                 Delete SupportsComments Where ArticleId = @ArticleId And Id = @Id And Password = @Password;                 
-                Update Answers Set CommentCount = CommentCount - 1 Where Id = @ArticleId;
+                Update Supports Set CommentCount = CommentCount - 1 Where Id = @ArticleId;
                 "
                 , new { ArticleId = articleId, Id = id, Password = password }
                 , commandType: CommandType.Text);

@@ -36,7 +36,9 @@ namespace MemoEngine.Supports
             p.Add("@Homepage", value: model.Homepage, dbType: DbType.String);
             p.Add("@FileName", value: model.FileName, dbType: DbType.String);
             p.Add("@FileSize", value: model.FileSize, dbType: DbType.Int32);
-            p.Add("@Category", value: model.Category, dbType: DbType.String); 
+            p.Add("@Category", value: model.Category, dbType: DbType.String);
+            
+            p.Add("@UserName", value: model.UserName, dbType: DbType.String); // 사용자 아이디 
 
             switch (formType)
             {
@@ -97,6 +99,11 @@ namespace MemoEngine.Supports
             return db.Execute("SupportsDelete", new { Id = id, Password = password }, 
                 commandType: CommandType.StoredProcedure);
         }
+        public int Delete(int id, string password, string userName)
+        {
+            return db.Execute("SupportsDelete", new { Id = id, Password = password, UserName = userName },
+                commandType: CommandType.StoredProcedure);
+        }
 
         public bool Edit(ArticleBase model)
         {
@@ -145,6 +152,11 @@ namespace MemoEngine.Supports
         public ArticleBase GetById(int id)
         {
             var parameters = new DynamicParameters(new { Id = id });
+            return db.Query<ArticleBase>("SupportsDetails", parameters, commandType: CommandType.StoredProcedure).SingleOrDefault();
+        }
+        public ArticleBase GetById(int id, string userName)
+        {
+            var parameters = new DynamicParameters(new { Id = id, UserName = userName });
             return db.Query<ArticleBase>("SupportsDetails", parameters, commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 

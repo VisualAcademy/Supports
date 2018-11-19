@@ -7,7 +7,8 @@ namespace MemoEngine.Supports
     {
         private int _Id; // 앞(리스트)에서 넘겨온 번호(아티클) 저장
 
-        private readonly ISupportRepository _repository;
+        private readonly SupportRepository _repository;
+        private string _userName; 
 
         public SupportDetails()
         {
@@ -16,6 +17,11 @@ namespace MemoEngine.Supports
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null)
+            {
+                _userName = Session["UserName"].ToString();
+            }
+
             try
             {
                 _Id = Convert.ToInt32(Request.QueryString["Id"]);
@@ -41,7 +47,7 @@ namespace MemoEngine.Supports
         private void DisplayData()
         {
             //[A] 넘겨온 Id 값에 해당하는 레코드 하나 읽어서 모델 클래스에 바인딩
-            var model = _repository.GetById(_Id);
+            var model = _repository.GetById(_Id, _userName);
 
             //[B] 각각의 항목을 컨트롤(레이블, 텍스트박스, ...)에 출력 
             lblNum.Text = _Id.ToString(); // 번호

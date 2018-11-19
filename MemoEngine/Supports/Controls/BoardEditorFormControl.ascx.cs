@@ -41,7 +41,8 @@ namespace MemoEngine.Supports.Controls
         private string _Id; // Request["Id"], Request["Num"]
 
         private readonly string connectionString;
-        private readonly ISupportRepository _repository;
+        private readonly SupportRepository _repository;
+        private string _userName; 
 
         public BoardEditorFormControl()
         {
@@ -51,6 +52,11 @@ namespace MemoEngine.Supports.Controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserName"] != null)
+            {
+                _userName = Session["UserName"].ToString();
+            }
+
             _Id = Request.QueryString["Id"];
             FileUploadPath = Server.MapPath("/BoardFiles/Supports");
 
@@ -76,7 +82,7 @@ namespace MemoEngine.Supports.Controls
         private void DisplayDataForReply()
         {
             // 넘겨온 Id 값에 해당하는 레코드 하나 읽어서 모델 클래스에 바인딩
-            var model = _repository.GetById(Convert.ToInt32(_Id));
+            var model = _repository.GetById(Convert.ToInt32(_Id), _userName);
 
             txtTitle.Text = $"Re : {model.Title}";
             //string content = $"<br /><br />On {model.PostDate}, '{model.Name}' wrote:<hr />{model.Content}";
@@ -87,7 +93,7 @@ namespace MemoEngine.Supports.Controls
         private void DisplayDataForModify()
         {
             //[A] 넘겨온 Id 값에 해당하는 레코드 하나 읽어서 모델 클래스에 바인딩
-            var model = _repository.GetById(Convert.ToInt32(_Id));
+            var model = _repository.GetById(Convert.ToInt32(_Id), _userName);
 
             //[B] 각각의 항목을 컨트롤(레이블, 텍스트박스, ...)에 출력 
             ddlCategoryList.SelectedValue = model.Category; // 기존 값 선택
@@ -150,6 +156,8 @@ namespace MemoEngine.Supports.Controls
                 model.Password = txtPassword.Text;
                 model.PostIp = Request.UserHostAddress;
                 model.Encoding = rdoEncoding.SelectedValue;
+
+                model.UserName = _userName; // 사용자 아이디 
 
                 // 폼 타입에 따른 저장/수정/답변 로직 적용
                 switch (FormType)

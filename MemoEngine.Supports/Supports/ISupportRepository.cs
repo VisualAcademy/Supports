@@ -42,6 +42,7 @@ namespace MemoEngine.Supports
         List<ArticleBase> GetNewPhotos();
 
         ArticleBase GetById(int id);
+        ArticleBase GetById(int id, string userName);
 
         List<ArticleBase> GetRecentPosts(int number = 5);
 
