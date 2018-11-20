@@ -88,7 +88,7 @@ namespace MemoEngine.Supports
         /// 수정일
         /// </summary>
         [Display(Name = "수정일")]
-        public DateTime ModifyDate { get; set; }
+        public DateTime? ModifyDate { get; set; }
 
         /// <summary>
         /// 수정 IP 주소
@@ -160,19 +160,19 @@ namespace MemoEngine.Supports
         /// 게시물의 일련번호
         /// </summary>
         [Display(Name = "번호")]
-        public int Num { get; set; }
+        public int? Num { get; set; }
 
         /// <summary>
         /// 회원제(Private) 게시판의 사용자 UID 
         /// </summary>
         [Display(Name = "사용자UID")]
-        public int UID { get; set; }
+        public int? UID { get; set; }
 
         /// <summary>
         /// 회원제(Private) 게시판의 사용자 UID == UserId
         /// </summary>
         [Display(Name = "사용자UID")]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
 
         /// <summary>
         /// 사용자 아이디
@@ -182,22 +182,22 @@ namespace MemoEngine.Supports
         /// <summary>
         /// 구분(카테고리) 번호 => Divisions 테이블의 Id 
         /// </summary>
-        public int DivisionId { get; set; }
+        public int? DivisionId { get; set; }
 
         /// <summary>
         /// 상품 카테고리 Id
         /// </summary>
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
 
         /// <summary>
         /// 게시판(Boards) 테이블의 Id
         /// </summary>
-        public int BoardId { get; set; }
+        public int? BoardId { get; set; }
 
         /// <summary>
         /// 응용 프로그램 Id
         /// </summary>
-        public int ApplicationId { get; set; }
+        public int? ApplicationId { get; set; }
         #endregion
     }
 }

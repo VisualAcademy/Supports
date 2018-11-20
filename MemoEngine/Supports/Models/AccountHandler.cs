@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Configuration;
+using System.Web;
 
 namespace MemoEngine.Supports
 {
@@ -7,7 +8,8 @@ namespace MemoEngine.Supports
         public static bool HasGroup(string strGroudName)
         {
             // 수작업으로 관리자 권한 체크
-            if (HttpContext.Current.Session["UserName"].ToString() == "admin@a.com")
+            string adminUserName = ConfigurationManager.AppSettings["SUPPORTS_ADMIN"].ToString();
+            if (HttpContext.Current.Session["UserName"].ToString() == adminUserName)
             {
                 return true;
             }

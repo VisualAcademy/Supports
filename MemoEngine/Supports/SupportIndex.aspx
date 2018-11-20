@@ -101,7 +101,7 @@
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="분류" HeaderStyle-Width="50px" ItemStyle-HorizontalAlign="Center">
                                                         <ItemTemplate>
-                                                            <%# Eval("Category") %>
+                                                            <%# ConvertToCategoryString(Eval("Category")) %>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="제 목" ItemStyle-HorizontalAlign="Left" HeaderStyle-Width="350px">

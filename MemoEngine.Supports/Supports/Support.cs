@@ -1,5 +1,8 @@
-﻿namespace MemoEngine.Supports
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MemoEngine.Supports
 {
+    [Table("Supports")]
     public class Support : ArticleBase
     {
         ///// <summary>

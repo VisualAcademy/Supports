@@ -151,5 +151,27 @@ namespace MemoEngine.Supports
             }
             ctlBoardList.DataBind();
         }
+
+        /// <summary>
+        /// 카테고리 Value를 다시 카테고리 Text로 변경
+        /// </summary>
+        public string ConvertToCategoryString(object objCategory)
+        {
+            string category = objCategory.ToString();
+            string r = "기타";
+            switch (category)
+            {
+                case "Question":
+                    r = "질문";
+                    break; 
+                case "Request":
+                    r = "건의";
+                    break;
+                default:
+                    r = "기타";
+                    break;
+            }
+            return r; 
+        }
     }
 }

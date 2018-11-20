@@ -2354,6 +2354,7 @@
     <Content Include="Supports\Default.aspx" />
     <Content Include="Supports\ImageDown.aspx" />
     <Content Include="Supports\ImageText.aspx" />
+    <Content Include="Supports\Tests.aspx" />
     <Content Include="Supports\ThumbNail.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -2781,6 +2782,13 @@
     </Compile>
     <Compile Include="Supports\ImageText.aspx.designer.cs">
       <DependentUpon>ImageText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\Tests.aspx.cs">
+      <DependentUpon>Tests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Tests.aspx.designer.cs">
+      <DependentUpon>Tests.aspx</DependentUpon>
     </Compile>
     <Compile Include="Supports\ThumbNail.aspx.cs">
       <DependentUpon>ThumbNail.aspx</DependentUpon>
