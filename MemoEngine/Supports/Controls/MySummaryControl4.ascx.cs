@@ -48,8 +48,8 @@ namespace MemoEngine.Supports.Controls
                 if (AccountHandler.HasGroup("Administrators"))
                 {
                     return db.Supports
-                        //.Where(s => s.UserName == userName)
-                        .OrderByDescending(s => s.Id)
+                        .OrderByDescending(s => s.Ref)
+                        .ThenBy(s => s.RefOrder)
                         .Skip(startIndex)
                         .Take(maxRows).ToList();
                 }
@@ -57,7 +57,8 @@ namespace MemoEngine.Supports.Controls
                 {
                     return db.Supports
                         .Where(s => s.UserName == userName)
-                        .OrderByDescending(s => s.Id)
+                        .OrderByDescending(s => s.Ref)
+                        .ThenBy(s => s.RefOrder)
                         .Skip(startIndex)
                         .Take(maxRows).ToList();
                 }
