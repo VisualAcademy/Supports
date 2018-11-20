@@ -30,7 +30,7 @@ namespace MemoEngine.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ConnectionString", throwIfV1Schema: false)
         {
         }
 
