@@ -2308,6 +2308,7 @@
     <Content Include="images\MemoEngine\title_55x55_help.gif" />
     <Content Include="images\MemoEngine\title_55x55_new.jpg" />
     <Content Include="images\MemoEngine\up.png" />
+    <Content Include="My.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -2337,6 +2338,13 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Supports\Controls\MySummaryControl6.ascx" />
+    <Content Include="Supports\Controls\MySummaryControl5.ascx" />
+    <Content Include="Supports\Controls\MySummaryControl4.ascx" />
+    <Content Include="Supports\Controls\MySummaryControl3.ascx" />
+    <Content Include="Supports\Controls\MySummaryControl2.ascx" />
+    <Content Include="Supports\Controls\MySummaryControl.ascx" />
+    <Content Include="Supports\MySupportsTest.aspx" />
     <Content Include="Supports\SupportCommentDelete.aspx" />
     <Content Include="Supports\SupportCreate.aspx" />
     <Content Include="Supports\SupportDelete.aspx" />
@@ -2647,6 +2655,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="My.aspx.cs">
+      <DependentUpon>My.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My.aspx.designer.cs">
+      <DependentUpon>My.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -2663,7 +2678,56 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Supports\Controls\MySummaryControl6.ascx.cs">
+      <DependentUpon>MySummaryControl6.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl6.ascx.designer.cs">
+      <DependentUpon>MySummaryControl6.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl5.ascx.cs">
+      <DependentUpon>MySummaryControl5.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl5.ascx.designer.cs">
+      <DependentUpon>MySummaryControl5.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl4.ascx.cs">
+      <DependentUpon>MySummaryControl4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl4.ascx.designer.cs">
+      <DependentUpon>MySummaryControl4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl3.ascx.cs">
+      <DependentUpon>MySummaryControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl3.ascx.designer.cs">
+      <DependentUpon>MySummaryControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl2.ascx.cs">
+      <DependentUpon>MySummaryControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl2.ascx.designer.cs">
+      <DependentUpon>MySummaryControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl.ascx.cs">
+      <DependentUpon>MySummaryControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\Controls\MySummaryControl.ascx.designer.cs">
+      <DependentUpon>MySummaryControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Supports\Models\AccountHandler.cs" />
+    <Compile Include="Supports\MySupportsTest.aspx.cs">
+      <DependentUpon>MySupportsTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\MySupportsTest.aspx.designer.cs">
+      <DependentUpon>MySupportsTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Supports\SupportCommentDelete.aspx.cs">
       <DependentUpon>SupportCommentDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -44,7 +44,7 @@
                     <a class="nav-link" href="#">Users</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link" href="/My.aspx">MyPage</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
@@ -136,10 +136,28 @@
                                 <i class="nav-icon icon-speedometer"></i> 빈 페이지 
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Account/Login.aspx">
+                                <i class="nav-icon icon-speedometer"></i> 로그인 
+                            </a>
+                        </li>
                         
                         <li class="nav-item">
                             <a class="nav-link" href="~/Answers/AnswerIndex.aspx" runat="server">
                                 <i class="nav-icon icon-speedometer"></i> Q&amp;A 게시판 
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Supports/SupportIndex.aspx" runat="server">
+                                <i class="nav-icon icon-speedometer"></i> Support 게시판 
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Supports/MySupportsTest.aspx" runat="server">
+                                <i class="nav-icon icon-speedometer"></i> MyPage 
                             </a>
                         </li>
 

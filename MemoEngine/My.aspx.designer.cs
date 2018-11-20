@@ -7,45 +7,63 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace MemoEngine.Dashboard {
+namespace MemoEngine {
     
     
-    public partial class DashboardCore {
+    public partial class My {
         
         /// <summary>
-        /// HeaderContent 컨트롤입니다.
+        /// MySummaryControl 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeaderContent;
+        protected global::MemoEngine.Supports.Controls.MySummaryControl MySummaryControl;
         
         /// <summary>
-        /// form1 컨트롤입니다.
+        /// MySummaryControl2 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::MemoEngine.Supports.Controls.MySummaryControl2 MySummaryControl2;
         
         /// <summary>
-        /// MainContent 컨트롤입니다.
+        /// MySummaryControl3 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::MemoEngine.Supports.Controls.MySummaryControl3 MySummaryControl3;
         
         /// <summary>
-        /// FooterContent 컨트롤입니다.
+        /// MySummaryControl4 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder FooterContent;
+        protected global::MemoEngine.Supports.Controls.MySummaryControl4 MySummaryControl4;
+        
+        /// <summary>
+        /// MySummaryControl5 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::MemoEngine.Supports.Controls.MySummaryControl5 MySummaryControl5;
+        
+        /// <summary>
+        /// MySummaryControl6 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::MemoEngine.Supports.Controls.MySummaryControl6 MySummaryControl6;
     }
 }
