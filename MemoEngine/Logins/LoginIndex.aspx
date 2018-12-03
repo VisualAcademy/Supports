@@ -85,7 +85,7 @@
                                                         <br />
                                                         <br />
                                                         <br />
-                                                        <span style="color: red;">현재 게시판에 입력된 데이터가 없습니다.
+                                                        <span style="color: red;">사용자 로그인 데이터가 없습니다.
                                                         </span>
                                                         <br />
                                                         <br />

@@ -14,7 +14,8 @@ namespace MemoEngine.Logins
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=(localdb)\mssqllocaldb;database=MemoEngine;trusted_connection=true");
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 }
