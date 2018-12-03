@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using MemoEngine.Models;
+using MemoEngine.Logins;
 
 namespace MemoEngine.Account
 {
@@ -38,6 +39,19 @@ namespace MemoEngine.Account
                 // 로그인 성공했으면
                 Session["UserName"] = Email.Text; // 이메일 또는 아이디 
 
+                // 로그인 기록 남기기
+                using (var loginContext = new LoginContext())
+                {
+                    var loginModel = new MemoEngine.Logins.Login();
+                    loginModel.UserId = 5; 
+                    loginModel.UserName = Session["UserName"].ToString();
+                    loginModel.LoginIp = Request.UserHostAddress;
+                    loginModel.LoginDate = DateTime.Now; 
+
+                    loginContext.Add(loginModel);
+                    loginContext.SaveChanges(); 
+                }
+                
                 // 수작업으로 관리자 권한을 추가
                 if (Email.Text == "admin@a.com")
                 {

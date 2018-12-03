@@ -74,6 +74,10 @@
     <Folder Include="Supports\dbo\Tables\Supports" />
     <Folder Include="Supports\dbo\Stored Procedures" />
     <Folder Include="Supports\dbo\Stored Procedures\Supports" />
+    <Folder Include="Logins" />
+    <Folder Include="Logins\dbo" />
+    <Folder Include="Logins\dbo\Stored Procedures" />
+    <Folder Include="Logins\dbo\Tables" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Answers\dbo\Stored Procedures\Answers\AnswersCount.sql" />
@@ -102,6 +106,14 @@
     <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsDetailsAdmin.sql" />
     <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchCountAdmin.sql" />
     <Build Include="Supports\dbo\Stored Procedures\Supports\SupportsSearchListAdmin.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsCount.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsList.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsListAdmin.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsSearchCount.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsSearchCountAdmin.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsSearchList.sql" />
+    <Build Include="Logins\dbo\Stored Procedures\LoginsSearchListAdmin.sql" />
+    <Build Include="Logins\dbo\Tables\Logins.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MemoEngine.Database.publish.xml" />

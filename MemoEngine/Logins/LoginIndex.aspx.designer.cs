@@ -7,45 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MemoEngine.Dashboard {
+namespace MemoEngine.Logins {
     
     
-    public partial class DashboardCore {
+    public partial class LoginIndex {
         
         /// <summary>
-        /// HeaderContent control.
+        /// BoardSearchFormSingleControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeaderContent;
+        protected global::MemoEngine.Logins.Controls.BoardSearchFormSingleControl BoardSearchFormSingleControl;
         
         /// <summary>
-        /// form1 control.
+        /// lblTotalRecord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Literal lblTotalRecord;
         
         /// <summary>
-        /// MainContent control.
+        /// ctlBoardList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.GridView ctlBoardList;
         
         /// <summary>
-        /// FooterContent control.
+        /// AdvancedPagingSingleWithBootstrap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder FooterContent;
+        protected global::MemoEngine.Logins.Controls.AdvancedPagingSingleWithBootstrap AdvancedPagingSingleWithBootstrap;
     }
 }

@@ -161,6 +161,12 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Logins/LoginIndex.aspx" runat="server">
+                                <i class="nav-icon icon-speedometer"></i> 로그인 리스트 
+                            </a>
+                        </li>
+
                         <li class="nav-title">Theme</li>
                         <li class="nav-item">
                             <a class="nav-link" href="colors.html">
