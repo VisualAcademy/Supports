@@ -1601,6 +1601,7 @@
     <Content Include="Dashboard\widgets.html" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="February.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2158,6 +2159,7 @@
     <Content Include="Dashboard\lib\simple-line-icons\package.json" />
     <Content Include="Dashboard\lib\simple-line-icons\README.md" />
     <Content Include="Dashboard\lib\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="January.aspx" />
     <Content Include="libman.json" />
     <Content Include="lib\bootstrap-datepicker\css\bootstrap-datepicker.css.map" />
     <Content Include="lib\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css.map" />
@@ -2427,7 +2429,9 @@
     <Content Include="Logins\Controls\BoardSearchFormSingleControl.ascx" />
     <Content Include="Logins\Default.aspx" />
     <Content Include="Logins\LoginIndex.aspx" />
+    <Content Include="March.aspx" />
     <Content Include="My.aspx" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -2770,8 +2774,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="February.aspx.cs">
+      <DependentUpon>February.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="February.aspx.designer.cs">
+      <DependentUpon>February.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="January.aspx.cs">
+      <DependentUpon>January.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="January.aspx.designer.cs">
+      <DependentUpon>January.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logins\Controls\AdvancedPagingSingleWithBootstrap.ascx.cs">
       <DependentUpon>AdvancedPagingSingleWithBootstrap.ascx</DependentUpon>
@@ -2802,6 +2820,13 @@
       <DependentUpon>LoginIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logins\Models\AccountHandler.cs" />
+    <Compile Include="March.aspx.cs">
+      <DependentUpon>March.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="March.aspx.designer.cs">
+      <DependentUpon>March.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="My.aspx.cs">
       <DependentUpon>My.aspx</DependentUpon>
