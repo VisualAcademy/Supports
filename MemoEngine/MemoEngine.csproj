@@ -2428,6 +2428,10 @@
     <Content Include="lib\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
     <Content Include="lib\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
     <Content Include="lib\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="lib\chartjs\Chart.bundle.js" />
+    <Content Include="lib\chartjs\Chart.bundle.min.js" />
+    <Content Include="lib\chartjs\Chart.js" />
+    <Content Include="lib\chartjs\Chart.min.js" />
     <Content Include="Logins\Controls\AdvancedPagingSingleWithBootstrap.ascx" />
     <Content Include="Logins\Controls\BoardSearchFormSingleControl.ascx" />
     <Content Include="Logins\Default.aspx" />
@@ -2476,6 +2480,7 @@
     <Content Include="Supports\SupportDelete.aspx" />
     <Content Include="Supports\SupportDetails.aspx" />
     <Content Include="Supports\SupportEdit.aspx" />
+    <Content Include="Supports\SupportCompare.aspx" />
     <Content Include="Supports\SupportIndex.aspx" />
     <Content Include="Supports\SupportReply.aspx" />
     <Content Include="Supports\BoardDown.aspx" />
@@ -2938,6 +2943,13 @@
     </Compile>
     <Compile Include="Supports\SupportEdit.aspx.designer.cs">
       <DependentUpon>SupportEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supports\SupportCompare.aspx.cs">
+      <DependentUpon>SupportCompare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supports\SupportCompare.aspx.designer.cs">
+      <DependentUpon>SupportCompare.aspx</DependentUpon>
     </Compile>
     <Compile Include="Supports\SupportIndex.aspx.cs">
       <DependentUpon>SupportIndex.aspx</DependentUpon>
